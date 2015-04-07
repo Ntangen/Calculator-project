@@ -41,6 +41,7 @@ class ViewController: UIViewController
     @IBAction func clear(sender: UIButton) {
         display.text = "0"
         history.text = "0"
+        brain.clearStack()
     }
     
     @IBAction func operate(sender: UIButton) {
