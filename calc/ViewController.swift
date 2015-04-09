@@ -29,7 +29,14 @@ class ViewController: UIViewController
     }
     
     @IBAction func backspace(sender: UIButton) {
-        display.text = dropLast(display.text!)
+        if userTyping {
+            if countElements(display.text!) > 1 {
+                display.text = dropLast(display.text!)
+            } else {
+                display.text = "0"
+            }
+        }
+
     }
     
     @IBAction func pi(){
